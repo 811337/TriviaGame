@@ -1,0 +1,14 @@
+.background {
+    background-image: url("../images/circle.jpg");
+}
+
+.box {
+    background-color: rgb(163, 163, 163);
+    padding: 125px 0;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    top: 30px;
+}
