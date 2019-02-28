@@ -8,6 +8,7 @@ window.onload = function() {
 var number = 60;
 var count;
 var countCorrect = 0;
+var countIncorrect = 10;
 
 function decrement() {
     number--;
@@ -39,10 +40,13 @@ document.getElementById("endButton").addEventListener("click", function() {
     document.getElementById("end").hidden = false;
 });
 
-//define correct answer
-//if correct answer is active, add to correct count, otherwise add to incorrect count
-document.getElementById("option2").addEventListener("click", function() {
+//define correct answer as option2
+//if correct answer is clicked, add to correct count and minus incorrect count
+$(".option2").on("click", function() {
     countCorrect++;
+    countIncorrect--;
     $("#correct").html("<span>" + countCorrect + "</span>");
-    console.log(countCorrect);
+    $("#incorrect").html("<span>" + countIncorrect + "</span>");
 })
+
+//could not figure out how to make use choose only one option
