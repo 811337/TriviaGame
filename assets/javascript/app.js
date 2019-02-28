@@ -49,4 +49,4 @@ $(".option2").on("click", function() {
     $("#incorrect").html("<span>" + countIncorrect + "</span>");
 })
 
-//could not figure out how to make use choose only one option
+//could not figure out how to make user choose only one option or change answers
