@@ -5,8 +5,9 @@ window.onload = function() {
     document.getElementById("end").hidden = true;
 };
 
-var number = 600;
+var number = 60;
 var count;
+var countCorrect = 0;
 
 function decrement() {
     number--;
@@ -37,3 +38,11 @@ document.getElementById("endButton").addEventListener("click", function() {
     document.getElementById("question").hidden = true;
     document.getElementById("end").hidden = false;
 });
+
+//define correct answer
+//if correct answer is active, add to correct count, otherwise add to incorrect count
+document.getElementById("option2").addEventListener("click", function() {
+    countCorrect++;
+    $("#correct").html("<span>" + countCorrect + "</span>");
+    console.log(countCorrect);
+})
